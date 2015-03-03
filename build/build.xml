@@ -1,6 +1,37 @@
 <?xml version="1.0"?>
-   <project name="L'Algorithme de la Guerre" default="hello">
-       <target name="hello">
-          <echo>Hello World!</echo>
-       </target>
-   </project>
+<project name="L'Algorithme de la Guerre" default="build">
+	<property name="basedir" value=".." />
+	<property name="build.dir" value="${basedir}/build" /> 
+	<property name="src.dir" value="${basedir}/src" /> 
+	<path id="class.test.not">
+		<fileset dir="${src.dir}" casesensitive="yes">
+			<include name="**/*.java"/>
+			<exclude name="**/*Test*"/>
+		</fileset>
+	</path>
+	<path id="class.test">
+		<fileset dir="${src}" casesensitive="yes">
+			<include name="**/*Test*"/>
+			<exclude name="**/*.java"/>
+		</fileset>
+	</path>
+
+
+	<target name="init">
+		<echo>Initialization</echo>
+	</target>
+	<target name="build" depends="init">
+		<echo>Building</echo>
+		<javac srcdir="${toString:class.test.not}" destdir="${build.dir}/classes" />
+	</target>
+	<target name="tests" depends="build">
+		<echo>Starting tests</echo>
+		<javac srcdir="${toString:class.test}" destdir="${build.dir}/classes" />
+	</target>
+	<target name="install" depends="tests">
+		<echo>Preparing for install</echo>
+	</target>
+	<target name="clean">
+		<echo>Cleaning</echo>
+	</target>
+</project>
