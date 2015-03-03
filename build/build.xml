@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <project name="L'Algorithme de la Guerre" default="build">
-	<property name="basedir" value=".." />
-	<property name="build.dir" value="${basedir}/build" /> 
-	<property name="src.dir" value="${basedir}/src" /> 
+	<property name="build.dir" value="." /> 
+	<property name="src.dir" value="../src" /> 
+	<property name="classes.dir" value="classes" /> 
 	<path id="class.test.not">
 		<fileset dir="${src.dir}" casesensitive="yes">
 			<include name="**/*.java"/>
@@ -10,7 +10,7 @@
 		</fileset>
 	</path>
 	<path id="class.test">
-		<fileset dir="${src}" casesensitive="yes">
+		<fileset dir="${src.dir}" casesensitive="yes">
 			<include name="**/*Test*"/>
 			<exclude name="**/*.java"/>
 		</fileset>
@@ -19,19 +19,28 @@
 
 	<target name="init">
 		<echo>Initialization</echo>
+		<mkdir dir="${classes.dir}" />
 	</target>
 	<target name="build" depends="init">
 		<echo>Building</echo>
-		<javac srcdir="${toString:class.test.not}" destdir="${build.dir}/classes" />
+		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${classes.dir}">
+			<include name="**/*.java"/>
+			<exclude name="**/*Test*"/>
+		</javac>
 	</target>
 	<target name="tests" depends="build">
 		<echo>Starting tests</echo>
-		<javac srcdir="${toString:class.test}" destdir="${build.dir}/classes" />
+		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${classes.dir}">
+			<include name="**/*Test*"/>
+			<exclude name="**/*.java"/>
+		</javac>
 	</target>
 	<target name="install" depends="tests">
 		<echo>Preparing for install</echo>
 	</target>
 	<target name="clean">
 		<echo>Cleaning</echo>
+		<delete dir="${classes.dir}" />
+
 	</target>
 </project>
