@@ -1,0 +1,81 @@
+\chapter{Specification des besoins}
+	\markboth{\MakeUppercase{Specitification des besoins}}{}
+	\section{Besoins fonctionnels}
+  
+     	\subsection{Règles du jeu}
+			\subsubsection{Formaliser les règles}
+			
+			\textbf{Priorité} : Forte.
+			
+			\textbf{Description} : Nous mettrons en place une structure formelle des règles afin que celles-ci soient comprises par la machine. Il s'agit de les retranscrire sous forme d'une structure logique conditionnelle, afin que l'ordinateur puisse, dans une situation donnée, évaluer l'état du jeu actuel.
+			
+			\textbf{Test} : Nous utiliserons la partie commentée présente dans le livre de Guy Debord afin de vérifier l'évaluation des données par le logiciel.
+			
+			
+			\subsubsection{Mettre en place le moteur de règles}
+			
+			\textbf{Priorité} : Forte.
+			
+			\textbf{Description} : Nous mettrons en place un moteur de règles qui permettra de rapidement ajouter les règles formalisées et d'établir de possibles priorités entre elles.
+			
+			\textbf{Test} : Nous ferons évaluer au logiciel différentes situations de jeu, qui permettrons d'illustrer de possibles erreurs sur la transcriptions des règles ou leurs priorités.
+		\subsection{Évaluation statique}
+			\subsubsection{Déterminer les actions possibles}
+			\textbf{Priorité} : Forte.
+			
+			\textbf{Description} : Pour chaque pièce dans une situation donnée, le logiciel doit calculer les déplacements possibles et les unités attaquables.
+			
+			\textbf{Test} : De la même manière que pour le moteur de règles, nous utiliserons des situations de jeu particulières pour illustrer de mauvaises évaluations. Par exemple, une situation où l'unité ne peut pas agir : toute suggestion pour cette unité sera la preuve d'une erreur.
+			\subsubsection{Calculer les coefficients de chaque unité}
+			\textbf{Priorité} : Forte.
+			
+			\textbf{Description} : Pour chaque combat possible, le logiciel doit calculer l'ensemble des coefficients de chaque unité engagée dans le combat, en prenant en compte toutes les règles de combat.
+			
+			\textbf{Test} : Nous utiliserons des situations de jeu données où au moins un affrontement est possible et où nous connaissons les coefficients de chaque affrontement. Les résultats seront confrontés avec les coefficients pré-calculés.
+			\subsubsection{Déterminer les actions risquées}
+			\textbf{Priorité} : Moyenne.
+			
+			\textbf{Description} : Il s'agira dans une situation donnée, de relever les actions pouvant mettre en danger une ou des unités. Le danger peut être la perte de communication, l'affaiblissement d'une défense ou l'ouverture d'un passage sur une ligne de front.
+			
+			\textbf{Test} : Suivant une grille de danger pré-établie pour une situation donnée, nous vérifierons les résultats obtenus.
+			\subsubsection{Déterminer les niveaux de menace}
+			\textbf{Priorité} : Faible.
+			
+			\textbf{Description} : Pour chaque case du plateau, le logiciel calcule le niveau de menace exercé par l'armée adverse sur ladite case. Ce niveau sera calculé en prenant en compte l'ensemble des coefficients s'exerçant sur elle.
+			
+			\textbf{Test} : Nous utiliserons un ensemble de situations où les niveaux de menace ont été préalablement calculés et confronterons les résultats obtenus.
+			
+		\subsection{Représentation du jeu}
+			Pour cette section, tous les tests se limiteront à vérifier l'affichage correct des données du jeu.
+			
+			\subsubsection{Coefficients}
+			\textbf{Priorité} : Moyenne.
+			
+			\textbf{Description} : Il s'agira de représenter les différents coefficients de chaque affrontement sous une forme graphique facilement lisible, pouvant détailler les coefficients des unités impliquées et des modificateurs dues à des règles secondaires. La forme pouvant être un histogramme, un aplat de couleur...
+			\subsubsection{Actions}
+			\textbf{Priorité} : Moyenne.
+			
+			\textbf{Description} : Le but sera de représenter pour chaque unité l'ensemble des mouvements et attaques qu'elles peut effectuer. Suivant la représentation globale du logiciel choisi, elle pourra se présenter sous la forme d'une liste ou d'une coloration de cases.
+			
+			\subsubsection{Niveaux de menace}
+			\textbf{Priorité} : Faible.
+			
+			\textbf{Description} : Pour chaque case du plateau, les niveaux de menace seront représenté visuellement sous forme d'une coloration de case ou un vecteur de liste.
+			
+			\subsubsection{État du plateau}
+			\textbf{Priorité} : Faible.
+			
+			\textbf{Description} : Nous réaliserons une représentation visuelle minimaliste en 2D du plateau pour une situation de jeu donnée. Cette représentation n'est pas critique pour le projet, mais permettra une meilleure visualisation des situations et des données qui en ressortent.	
+			
+	\subsection{Heuristique}
+		Dans le cas d'une bonne avancée du projet, le calcul des heuristiques d'une situation donnée et leur évaluations pourront être rajoutés aux besoins fonctionnels du projet mais sont considérés comme secondaires en comparaison aux besoins déjà exprimés. Néanmoins, nous détaillerons dans cette section les-dits besoins.
+		
+			\subsubsection{Actions avantageuses}
+			
+			\textbf{Description} : En recoupant l'évaluation des données déjà calculées, le logiciel définira la ou les actions les plus avantageuses. Ce calcul pourra négliger le caractère risqué de certaines actions afin d'obtenir des actions plus avantageuses pour un joueur unique.
+			
+			\subsubsection{Actions pénalisantes}
+			
+			\textbf{Description} : De même que pour les actions avantageuse, le logiciel calculera une ou des actions qui ne seront pas directement avantageuse pour le joueur actif mais pénalisera directement son opposant en modifiant une situation équilibrée. Ce type d'action pouvant avoir une priorité supérieure ou non à une action avantageuse suivant la situation et les algorithmes choisis.
+   
+	\clearpage

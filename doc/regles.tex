@@ -1,0 +1,137 @@
+\chapter{Jeu de la Guerre}
+
+	\markboth{\MakeUppercase{Jeu de la Guerre}}{}
+	
+	\section{Présentation globale}
+	
+	Le Jeu de la Guerre ("KriegSpiel") est un jeu qui se joue sur un plateau 20 cases par 25, soit un total de 500 cases, divisé en son milieu par une ligne frontière parallèle à son côté le plus long. Cette frontière virtuelle permet de séparer le territoire des deux joueurs en début de jeu.
+	\\
+	
+  Les territoires ainsi défini des deux camps sont asymétriquement défini par la présence de neufs cases "montagne" en leur sein. Chaque camps contient aussi deux cases "arsenal", trois cases "fort" et une case "col" au sein de la chaîne de montagne formé par les neufs cases "montagne" et qui permettent un passage au sein de ces dites montagnes.
+  \\
+  
+  Chaque camps dispose d'un même stock d'unités qui sont placé librement par chaque joueur au sein de leur propre territoire, le placement de ces unités se fait en secret de l'autre joueur et les positions ne sont révélé qu'au tout début du jeu.
+  \\
+  
+  C'est par un tirage au sort qu'est défini le joueur qui commence. Les deux joueurs vont dès lors joué en alternance leur tour pendant lequel ils auront la possibilité de déplacer jusqu'à cinq unités de leurs unités et de procéder à une unique attaque.
+  \\
+  
+  Le but de chacun des joueurs est la destruction complète du potentiel militaire de son adversaire. Ce résultat peut être obtenu de deux manière différente : soit par la destruction ou neutralisation de toutes les unités combattantes ou par la capture des deux arsenaux ennemi. 
+  
+  
+  
+  \section{Le plateau}
+  
+
+  Comme indiqué dans la section précédente , le plateau est composé de deux territoires asymétriquement tracés contenant divers éléments statiques :\\ 
+  
+   \begin{itemize}
+       \renewcommand{\labelitemi}{$\bullet$}
+    
+      \item[-] Les arsenaux représente l'objectif de chaque joueur, le premier à les perdre, perd la partie. Ces deux arsenal génèrent des lignes de communications dont l'importance est crucial au sein d'une partie. 
+      \item[-] Les montagnes représentent des cases infranchissables par les troupes et les lignes de communications. La seule façon de passer une montagne étant de la contourner ou de passer par son col. 
+      \item[-] Le col est le seul passage possible dans une chaîne de montagne et donne un bonus de défense à la plupart des unités qui s'y place faisant de lui un point stratégique.
+      \item[-] De même que les cols, les forteresses donnent un bonus de défense à l'unité qui y est stationnés, à l'exception des cavaliers. Ces forteresses sont placé sur des cases vide du plateau.
+
+  \end{itemize}
+  
+  \section{Unités}
+  
+  Chaque joueur dispose au début de la partie d'un ensemble 15 unités combattantes et 2 unités de transmissions qu'il dispose à sa guise sur le plateau :\\  
+  
+  
+  \begin{itemize}
+    \renewcommand{\labelitemi}{$\bullet$}
+      \item 9 régiments d'infanterie
+      \item 4 régiments de cavalerie
+      \item 1 régiment d'artillerie à pied
+      \item 1 régiment d'artillerie à cheval
+      \item 1 unité de transmission à pied
+      \item 1 unité de transmission à cheval\\
+      
+  \end{itemize} 
+  
+    Ci-dessous un tableau récapitulatif expliquant les caractéristiques des différentes unités. \\\\ 
+    
+   \begin{tabular}{|l|c|c|c|c|}
+   \hline
+    & Force d'attaque & Défense & Vitesse de déplacement & Portée\\ \hline  
+   Infanterie & 4 & 6 & 1 case & 2 cases\\ \hline
+   Cavalerie & 4 ou 7 & 5 & 2 cases & 2 cases\\ \hline
+   Artillerie à pied & 5 & 8 & 1 case & 3 cases\\ \hline
+   Artillerie à cheval & 5 & 8 & 2 cases & 3 cases\\ \hline
+   Transmission à pied & 0 & 1 & 1 case & 2 cases\\ \hline
+   Transmission à cheval & 0 & 1 & 2 cases & 2 cases\\ \hline
+   \end{tabular} \\\\
+   
+      
+	\subsection*{Cas particuliers}
+		\subsubsection{La cavalerie}
+
+   La cavalerie à une force d'attaque de 4 lorsqu'il n'est pas en contact avec un autre joueur, mais s'il se retrouve à être en contact avec une unité adverse cette force d'attaque passe à 7. Cette situation s'appelle la "charge" et prend place quand un cavalier est en contact direct avec une unité adverse ou si sur une même ligne d'attaque plusieurs unité de cavalerie sont directement adjacent à une autre qui se trouve elle même en situation de charge. Cette situation ne peut cependant pas être utilisé sur une unité retranché dans un col ou une forteresse.\\
+
+		\subsubsection{Les unités de transmission}
+   
+   Les unités de transmission sont les seules pièces permettant de relayer les lignes de communications générées par les arsenaux, en effet quand une transmission est en contact avec une ligne de communication, elle créée automatiquement de nouvelles lignes de communications dans chacune des huit directions. 
+   De plus les unités de transmission sont les seules pièces pouvant se déplacer sur le plateau sans être en contact avec une ligne de communication de manière directe ou indirecte (voir section suivante).
+   
+   	\section{Lignes de communication}	
+	
+	La diffusion des lignes de communication se font dans les huit directions à partir de chacun des arsenaux  et une unité ne peut pas agir à moins qu'elle se trouve en contact direct ou indirect avec une ligne de communication. \\
+	
+	Un contact indirect se fait par le truchement d'une unité en contact direct avec une ligne de communication, il n'y a pas de limite au nombre d'unité pouvant être impliquée dans ce contact indirect. Par exemple, une ligne d'unités adjacentes dont seule une est en contact direct aura toutes ses unités en contact indirect jusqu'à ce que la ligne soit rompue ou que le contact direct soit brisé.\\
+	
+	Une unité en contact avec une ligne de communication provenant d'une unité de transmission et non d'un arsenal est quand même considéré comme étant en contact direct avec la ligne de communication, les unités de transmission étant considéré comme de simple relais dans ce cas là.\\
+	
+	Concernant les unités de transmission, celles ci ne peuvent se faire le relais d'une ligne de transmission existante qu'à la stricte condition qu'elles soient en contact direct avec cette ligne. Si elle est en contact indirect avec celle ci, elle se comportera comme une unité classique et ne générera pas de nouvelles lignes de communication.\\
+	
+      Toute les lignes de communication peuvent être interrompues soit par les montagnes, par la présence d'une unité adverse sur cette même ligne. La capture de l'arsenal transmettant la ligne provoque naturellement la fin de cette même signe, de même avec la capture de l'unité de transmission relayant cette ligne depuis l'arsenal.
+   
+  \section{Combat entre unités}
+  
+	En situation de combat et pour chaque unité impliqué dans un combat il faut calculer la force d'attaque de l'unité attaquante et la défense de l'unité cible.\\	
+
+    La force d'attaque d'une unité (A) donnée est égale à la somme des coefficients offensif de toutes les unités qui sont en situation d'attaquer l'unité (D) ciblée.\\
+	  
+    La défense d'une unité (D) donnée est égal à la somme des coefficients défensif des unités se situant dans la portée de la dite unité ainsi que son propre coefficient de défense.\\
+    
+    Une fois l'attaque et la défense calculé il existe trois solutions possible pour chaque affrontement :
+
+	\begin{itemize}
+    \renewcommand{\labelitemi}{$\bullet$}
+	\item L'unité en défense (D) ne peut être détruite que si la différence entre l'attaque de (A) et sa propre défense est supérieur ou égale à deux.
+    
+	\item Lorsque cette différence est strictement égale à un, la pièce (D) se trouve en cas de retraite. (voir "La retraite")
+	
+	\item Si l'attaque de (A) est égal ou inférieur à la défense de (D), l'unité (D) résiste à l'attaque.\\    
+    
+    \end{itemize}
+
+	\subsubsection*{La retraite}
+
+	Si une unité se trouve dans un cas où elle doit effectuer une retraite, elle se trouve dans une situation où le premier coup de son propriétaire au tour suivant sera obligatoirement de la déplacer vers une autre position. Deux cas se présente alors :
+   
+   
+   \begin{itemize}
+   \renewcommand{\labelitemi}{$\bullet$}
+	\item Cas 1 : Si l'unité (D) a pu faire retraite et quitter la case qu'elle occupait, au prochain tour son coefficient défensif ne sera pas pris en compte pour la défense d'autres unités.\\
+	
+ 	\item Cas 2 : Si l'unité (D) ne peut effectuer sa retraire car elle ne peut se déplacer librement, elle est automatiquement détruite.\\
+	  \end{itemize} 
+    
+
+    
+  \section{Cas particuliers}
+  
+Ces trois points de règles viennent en complément aux règles générale et concernent spécifiquement la gestion des unités par rapport aux forts et aux cols.  
+  
+    \begin{itemize}
+      \renewcommand{\labelitemi}{$\bullet$}
+        \item Les transmissions ne peuvent pas occuper un arsenal.
+        \item La défense du régiment d'artillerie (à pied ou à cheval) augmente à 10 quand celui-ci est placé dans un col et à 12 quand il est dans une forteresse 
+        \item La défense du régiment d'infanterie augmente à 8 quand celui-ci est placé dans un col et à 10 quand il est dans une forteresse 
+
+    \end{itemize}
+   
+  
+	\clearpage
